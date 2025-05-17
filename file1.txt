@@ -1,1 +1,1 @@
-file1 checking out of GIT
+file1 checking out of GIT. 

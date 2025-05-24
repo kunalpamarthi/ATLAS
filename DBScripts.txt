@@ -1,5 +1,7 @@
 Doc 06 MongoDb Scripts 
 
+https://docs.google.com/document/d/1nzKjIgr3C9TcVwyoBSd4knbpx6u2iPVqvWdpCyI2Zmo/edit?tab=t.0
+
 
 Insert 
 

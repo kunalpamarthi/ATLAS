@@ -14,8 +14,8 @@ public class Task014 {
         names[1]= "Reena";
         System.out.println(names[1]);
         System.out.println(names.length);
-        System.out.println(names[4]);
-        System.out.println(names[5]); // Try to access arr of 5th index.
-        System.out.println(names[-1]); // Try to access arr of -1 index.
+//        System.out.println(names[4]);
+//        System.out.println(names[5]); // Try to access arr of 5th index.
+//        System.out.println(names[-1]); // Try to access arr of -1 index.
     }
 }

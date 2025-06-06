@@ -1,4 +1,4 @@
-//Task020: Create an array of your name.
+//Task020: Create an array of your name
 
 public class Task020 {
     public static void main(String[] args) {

@@ -4,6 +4,10 @@ Now think what is the output of the below code.*/
 public class Task018 {
     public static void main(String[] args) {
         Person person = new Person();
-
+        System.out.println("Person's name: "+
+                person.getName()+"\t\t\t-from getter.");
+        person.setName("John");
+        System.out.println("Person's name: "+
+                person.getName()+"\t\t\t-after setting.");
     }
 }

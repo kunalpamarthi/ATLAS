@@ -1,7 +1,7 @@
 // Interfaces
 
 interface testInterface {
-    final int tax = 10;
+    int tax = 10;
     void display();
 }
 

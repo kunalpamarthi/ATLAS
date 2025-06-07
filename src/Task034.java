@@ -1,3 +1,5 @@
+// No. of parameters
+
 public class Task034 {
     static void add(int a, int b){
         System.out.println("Sum of given numbers: "+ (a+b));

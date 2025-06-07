@@ -15,10 +15,10 @@ public class Task035 {
         System.out.println("Enter two numbers: ");
         int a = scanner.nextInt();
         int b = scanner.nextInt();
-
+        char ca = 'a', cb='b';
         add(a, b);
         add((double) a, b);
-        add('a', 'b');
+        add(ca, cb);
 
         scanner.close();
     }

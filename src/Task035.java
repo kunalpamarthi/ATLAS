@@ -1,3 +1,5 @@
+// Type of parameters
+
 import java.util.Scanner;
 
 public class Task035 {

@@ -1,22 +1,22 @@
 class Student{
    public String name;
-   public String mobile;
-    Student(String name, String mobile){
+   public int mobile;
+    Student(String name, int mobile){
        this.name = name;
        this.mobile = mobile;
    }
 
-    @Override
+   @Override
     public String toString() {
-        return name+" "+mobile;
+        return name;
     }
 }
 
 public class Main {
     public static void main(String[] args) {
         Student[] myStudents = new Student[]{
-                new Student("Dharma", "123"), new Student("Sanvi", "456"),
-                new Student("Rupa", "345"), new Student("Ajay", "789")
+                new Student("Dharma", 123), new Student("Sanvi", 789),
+                new Student("Rupa", 345), new Student("Ajay", 3456)
         };
         // accessing the elements of the specified array
         for (Student m : myStudents) {

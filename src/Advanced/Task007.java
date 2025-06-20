@@ -11,7 +11,6 @@ class SyncBlockCounter {
         }
     }
 
-
     public int getCount() {
         return count;
     }

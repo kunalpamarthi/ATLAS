@@ -1,4 +1,4 @@
-// Task006: Threads Synchronization block
+// Task007: Threads Synchronization block
 
 package Advanced;
 

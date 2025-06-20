@@ -5,7 +5,7 @@ package Advanced;
 class SyncCounter {
     private int count = 0;
 
-    public void increment() {
+    public synchronized void increment() {
         count++;
     }
 

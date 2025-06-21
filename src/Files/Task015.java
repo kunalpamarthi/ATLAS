@@ -2,24 +2,19 @@
 
 package Files;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Task015 {
     public static void main(String[] args) {
-        List<Integer> numbers = new ArrayList<>();
-        Scanner scanner = new Scanner(System.in);
-        int num;
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
 
-        for (int i = 0; i < 5; i++) {
-            System.out.print("Enter number "+ (i+1)+": ");
-            num = scanner.nextInt();
-            numbers.add(num);
-        }
+        List<Integer> squares = numbers.stream()
+                .map(num -> num * num)
+                .collect(Collectors.toList());
 
-        numbers.stream().forEach(n -> System.out.println(
-                "Number: " + n + ", Square: " + (n * n)));
-        scanner.close();
+        System.out.println("Original Numbers: " + numbers);
+        System.out.println("Squares: " + squares);
     }
 }

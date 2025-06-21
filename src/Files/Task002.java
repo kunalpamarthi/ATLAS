@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class Task002 {
     public static void main(String[] args) {
-        FileInputStream infile = null;
+        FileInputStream infile;
         int b;
 
         try {

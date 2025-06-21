@@ -4,7 +4,7 @@ package Files;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
+
 
 public class Task015 {
     public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class Task015 {
 
         List<Integer> squares = numbers.stream()
                 .map(num -> num * num)
-                .collect(Collectors.toList());
+                .toList();
 
         System.out.println("Original Numbers: " + numbers);
         System.out.println("Squares: " + squares);

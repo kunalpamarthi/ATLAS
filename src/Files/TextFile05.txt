@@ -1,0 +1,1 @@
+Trying to move this data to another file, byte by byte.Entering data to the file from console.

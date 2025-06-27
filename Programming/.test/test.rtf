@@ -1,0 +1,776 @@
+Section 1: Java Programming
+Choose the correct option for the following questions:
+1. What is the output of the following program?
+public class Sample{
+    public static void main(String []args){
+        System.out.println("Great Day");
+        method(10);
+    }
+    static void method(int val){
+        if (val == 0)
+            return;
+        System.out.print(val%2);
+        method(val/2);
+} }
+a. Great Day
+0101
+b. Great Day
+1010
+c. Great Day
+1100
+d. Great Day
+11
+
+2. What will be the default value of a local integer variable if it is created without any
+value assigned to it?
+a. 0
+b. Random Value
+c. last integer variable's value
+d. error as local variables in Java have to be initialised to a value before they can be used in a program.
+
+3. Which of the following is not an access specifier in Java?
+a. Public
+b. Default
+c. Global
+d. Private
+
+4. What would be the output of the following code snippet?
+public class Sample {
+    public static void main(String args[]) {
+        String stra = "finland\norway\belarus";
+        System.out.println(stra);
+    }
+}
+a. finland
+norway
+belarus
+b. finland
+orwayelarus
+c. finland
+orway
+belarus
+d. finlandnorwaybelarus
+
+5. The following code is split into four parts numbered as 1, 2, 3, and 4. Identify the part that
+contains an error.
+class Employee{
+    public void salary(){
+        System.out.println("Employees in the organization");
+    }
+}
+class DeptMarketing extends Employee{ //------------1
+    public void salary(){
+        System.out.println("Marketing Department Salary");
+    }
+    public void mtargets(){
+        System.out.println("Targets of a Marketing Department");
+    }
+}
+public class TestMarketing{
+    public static void main(String args[]){
+        Employee a = new Employee();
+        Employee b = new DeptMarketing(); //---------------------2
+        a.salary();
+        b.salary(); //-----------------------3
+        b.mtargets();//---------------------4
+    }
+}
+a. 1
+b. 2
+c. 3
+d. 4
+
+6. What would be the output of the following code snippet?
+abstract class Sample{
+    static int varx = 20;
+    static void funca(){
+        System.out.println("Hello World");
+    }
+}
+public class NewSample extends Sample{
+    public static void main (String args[]){
+        Sample.funca();
+        System.out.println("varx = " +Sample.varx);
+    }
+}
+a. Hello World
+Runtime error after first print
+b. Error as static variables are not inherited to derived classes
+c. Hello World
+varx = 20
+d. Error as static variables cannot be declared in an abstract class
+
+7. What would be the output of the following code snippet?
+public class Sample{
+    public static void main(String []args){
+        double val = Math.sqrt(64);
+        System.out.println("value = " + val);
+        System.out.println(50 + 5 + "hello world");
+        System.out.println("hello world" + 50 + 5);
+    }
+}
+a. value = 8.0
+55hello world
+hello world505
+b. value = val 8
+505hello world
+hello world55
+c. value = 8.0 val
+50 5 hello world
+hello world 50 5
+d. value = 8.0 val
+55 hello world
+hello world 505
+
+8. A matrix value needs to be initialised in array and display the values on the console. The
+matrix is as follows:
+10 1 2
+1 20 3
+2 3 30
+Which of the following Java codes will you use to do this?
+a. public class testarray{
+    public static void main(String args[]){
+        int multi_arr[][] = { {10,1,2},{2,3,30},{1,20,3} };
+        for (int x=0; x< 3 ; x ){
+            for (int y=0; y < 3 ; y )
+                System.out.print(multi_arr[x][y] " ");
+            System.out.println(); }
+    }
+}
+b. public class testarray{
+    public static void main(String args[]){
+        int multi_arr[] = { {10,1,2},{1,20,3},{2,3,30} };
+        for (int x=0; x< 3 ; x ){
+            for (int y=0; y < 3 ; y )
+                System.out.print(multi_arr[x][y] " ");
+            System.out.println(); }
+    }
+}
+c. public class testarray{
+    public static void main(String args[]){
+        int multi_arr[][] = { {10,1,2},{1,20,3},{2,3,30} };
+        for (int x=0; x< 3 ; x ){
+            for (int y=0; y < 3 ; y )
+                System.out.print(multi_arr[x][y] " ");
+            System.out.println(); }
+    }
+}
+d. public class testarray{
+    public static void main(String args[]){
+        int multi_arr[][] = { {10,1,2},{1,20,3},{2,3,30} };
+        for (int x=0; x< 3 ; x ){
+            System.out.print(multi_arr[x][y] " ");
+            System.out.println(); }
+    }
+}
+
+9. What will be the output of the following code?
+import java.util.*;
+public class Samplecoll{
+    public static void main(String args[]){
+        LinkedHashSet<String> ls=new LinkedHashSet<String>();
+        ls.add("ironman");
+        ls.add("captain");
+        ls.add("wanda");
+        ls.add("ironman");
+        Iterator<String> itor=ls.iterator();
+        while(itor.hasNext()){
+            System.out.println(itor.next());
+        }
+    }
+}
+a. ironman
+ironman
+captain
+wanda
+b. ironman
+captain
+wanda
+c. ironman
+captain
+wanda
+ironman
+d. Syntax Error (trying to insert ironman twice)
+
+10. What would be the output of the following code snippet?
+public class Array1 {
+    public static void func1(String ar1[]){
+        ar1[0] = "where";
+    }
+    public static void main(String args[]){
+        String []ar2={"there you go"};
+        System.out.println("A: "+ar2[0]);
+        Array1.func1(ar2);
+        System.out.println("B: "+ar2[0]);
+    }
+}
+a. A: there you go
+B: where
+b. A: where you go
+B: where
+c. A: there you go
+B: there
+d. A: where you go
+B: where
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+Section 2: Data Structures
+Choose the correct option for the following questions:
+1. While using open addressing method of collision resolution technique, the interval
+between various consecutive probes increases proportional to the hash value. Identify
+the open addressing probe technique being used.
+a. Linear probing
+b. Quadratic probing
+c. Double hashing
+d. Separate chaining
+
+2. A hash function is used to map a key to an entry. Such keys are placed in a collection
+using that hash function. How must the load factor of that function be made for a given
+set of keys?
+a. Load factor must be 0
+b. Load factor must be low
+c. Load factor must be made high
+d. Load factor must be 1
+
+3. The Memorization approach of dynamic programming is being used for that solving the
+Fibonacci series.
+Which of the following skeleton code fits appropriately?
+a. int arr[n];
+int func(int i){
+    if(n==1)
+        return 1;
+    if(n==2)
+        return 1;
+    if(arr[n]!=0) return arr[n];
+    return arr[n]=func(n-1)+func(n-2);
+}
+b. int arr[n];
+int func(int i){
+    if(arr[n]!=0) return arr[n];
+    return arr[n]=func(n-1)+func(n-2);
+}
+c. int arr[n];
+int func(int i){
+    if(n==1)
+        return 1;
+    if(n==2)
+        return 1;
+    if(arr[n]==0) return arr[n];
+    return arr[n]=func(n-1)+func(n-2);
+}
+d. int arr[n];
+int func(int i){
+    if(n==1)
+        return 1;
+    if(n==2)
+        return 1;
+    return arr[n]=func(n-1)+func(n-2);
+}
+
+4. You are trying to design and use a binary tree for classifying the distance between
+various cities. An inorder traversal of the tree is to be generated to traverse the tree.
+Which of the following code skeleton would be appropriate?
+a. void function(class BinaryTreeNode *root){
+    if(root){
+        function(root-->right);
+        System.out.println("%d",root-->data);
+        function(root-->left);
+    }
+}
+b. void function(class BinaryTreeNode *root){
+    if(root){
+        function(root-->data);
+        System.out.println("%d",root-->left);
+        function(root-->right);
+    }
+}
+c. void function(class BinaryTreeNode *root){
+    if(root){
+        function(root-->left);
+        System.out.println("%d",data);
+        function(root-->right);
+    }
+}
+d. void function(class BinaryTreeNode *root){
+    if(root){
+        function(root-->left);
+        System.out.println("%d",root-->data);
+        function(root-->right);
+    }
+}
+
+5. What would be the worst case efficiency of a binary tree?
+a. 2n
+b. log n
+c. n
+d. log2n + 1
+
+6. Which Data Structure would be better in case of simple chaining?
+a. Single Linked List
+b. Double Linked List
+c. Circular Linked List
+d. Binary Trees
+
+7. Which of the following statements is true?
+a. Dijkstra’s algorithm has greedy and dynamic approach to find all shortest paths
+b. Kruskal's algorithm is used to find minimum
+c. insertion sort is proportional to n2
+d. All of the options are false
+
+8. Identify the piece of code to check whether the length of a given linear linked list is
+even or odd.
+a. int function(class ListNode *listHead){
+    while(listHead && listHead-->next)
+        listHead=listHead-->next-->next;
+    if(listHead)
+        return 1;
+    return 0;
+}
+b. int function(class ListNode *listHead){
+    while(listHead && listHead-->next)
+        listHead=listHead-->next-->next;
+    if(listHead)
+        return 0;
+    return 1;
+}
+c. int function(class ListNode *listHead){
+    while(listHead && listHead-->next)
+        listHead=listHead-->next;
+    if(listHead)
+        return 0;
+    return 1;
+}
+d. int function(class ListNode *listHead){
+    listHead=listHead-->next-->next;
+    if(listHead)
+        return 0;
+    return 1;
+}
+
+9. You have been given the task to insert a node in a binary search tree. The input size for
+the binary search tree is 8. Choose the appropriate space complexity for inserting the
+node.
+a. O(1)
+b. O(64)
+c. O(4)
+d. O(8)
+
+10. What will be the output of the following code?
+import java.util.*;
+public class Samplecoll{
+    public static void main(String args[]){
+        LinkedHashSet<String> ls=new LinkedHashSet<String>();
+        ls.add("ironman");
+        ls.add("captain");
+        ls.add("wanda");
+        ls.add("ironman");
+        Iterator<String> itor=ls.iterator();
+        while(itor.hasNext()){
+            System.out.println(itor.next());} 
+    }
+}
+a. ironman
+ironman
+captain
+wanda
+b. ironman
+captain
+wanda
+c. ironman
+captain
+wanda
+ironman
+d. Syntax Error (trying to insert ironman twice)
+
+-----------------------------------------------------------------------------------------------------------------
+
+Section 3: CS Fundamentals
+Choose the correct option for the following questions:
+1. Assuming Process X creates Process Y, which in turn creates Process Z, and all the
+processes run parallelly for few seconds. In the scenario where Process Y is killed,
+which of the following statements would be True?
+a. Process Z also terminates as it is the child of process Y
+b. Process Z has to mandatory be adopted by Process X
+c. Process X has to create another process to be parent for Process Z
+d. Process Z continues execution after having adopted by some process at the upper hierarchy.
+
+2. Where does BIOS reside?
+a. Within the Kernel
+b. RAM
+c. ROM
+d. within the application memory
+
+3. In object-oriented programming, there is a concept where an object has its own
+lifecycle and cannot belong to another parent object. Which of the following term can
+be used to represent this concept?
+a. Overloading
+b. Association
+c. Aggregation
+d. Composition
+
+4. Process A wants to create a shared memory section and share with Process B. Which
+of the following statements are true in this scenario?
+a. Process A's and Process B's overall memory size remains same and an extra
+    fragment of memory is allocated by the Operating System
+b. Process A's overall memory size increases, but process B's memory size remains same.
+c. Process A's and Process B's overall memory size increases.
+d. Process A and Process B contribute partially from their own pages for the shared memory.
+
+5. Which of the following may provide an interface for user programs to access the services of the OS?
+a. separate special application
+b. default thread of the program
+c. Bootloader
+d. system call
+
+6. Write a code snippet for employee class which shows the employee name “Jane Doe”
+and salary-1000 by using the constructor.
+a. class Employee{
+    String empname;
+    int salary;
+    Employee(String empname, int salary){
+        this.empname = empname;
+        this.salary =salary;
+    }
+}
+class EmployeeData{
+    public static void main (String[] args){
+        Employee emp = new Employee("Jane Doe", 1000);
+        System.out.println("EmployeeName :" + emp.empname + " and Employeesalary :" + emp.salary);
+    }
+}
+b. class Employee{
+    String empname;
+    int salary;
+    this.empname = empname;
+}
+class EmployeeData{
+    public static void main (String[] args){
+        Employee emp = new Employee("Jane Doe", 1000);
+            System.out.println("EmployeeName :" + emp.empname + " and Employeesalary :" + emp.salary);
+    }
+}
+c. class Employee{
+    String empname;
+    int salary;
+    Employeedata(String empname, int salary){
+        this.empname = empname;
+        this.salary =salary;
+    }
+}
+class EmployeeData{
+    public static void main (String[] args){
+        Employee emp = new Employeedata("Jane Doe", 1000);
+        System.out.println("EmployeeName :" + emp.empname + " and Employeesalary :" + emp.salary);
+    }
+}
+d. class Employee{
+    String empname;
+    int salary;
+    EmployeeData(String empname, int salary){
+        this.empname = empname;
+        this.salary =salary;
+    }
+}
+class EmployeeData{
+    public static void main (String[] args){
+        EmployeeData emp = new EmployeeData("Jane Doe", 1200);
+        System.out.println("EmployeeName :" + emp.empname + " and Employeesalary :" + emp.salary);
+    }
+}
+
+7. Which of the following will put the process in indefinite wait state ?
+a. A process in coffee vending machine waiting for 6 seconds to dispatch coffee
+b. A timed out based process waiting for data to arrive through sockets
+c. An application waiting for user to enter an input
+d. A process put to sleep for 5 seconds.
+
+8. Consider the following code snippet. What would be right code to replace the ####
+for the code to compile & run successfully?
+abstract class Sample{
+    int varx = 100;
+    public abstract void funca(); }
+public class NewSample extends Sample{
+    ##### funca() {}
+    public static void main(String []args){
+        Sample obj = new NewSample();
+        obj.funca();
+    }
+}
+a. Void
+b. Sample
+c. NewSample
+d. abstract void.
+
+9. Which of the following is most likely to have information about where the boot loader is?
+a. Operating System or kernel
+b. CPU or cache memory
+c. Primary Memory or RAM
+d. firmware or ROM
+
+10. What type of scheduling is round-robin scheduling?
+a. Linear
+b. Priority based scheduling
+c. Non premptive
+d. Preemptive
+
+-----------------------------------------------------------------------------------------------------------
+
+Section 4: Databases
+Choose the correct option for the following questions:
+1. Your team mate has written the following query:
+SELECT name, subject
+FROM trainer, teaches
+WHERE tr_ID= tc_ID;
+Which of the following query can be used by you as a replacement to above query?
+a. Select name,subject from teaches,trainer where tr_ID=subject;
+b. Select name, subject from trainer natural join teaches;
+c. Select name, subject from trainer;
+d. Select subject from trainer join teaches;
+
+2. You are required to perform changes in the values of a relational database. Which
+category would your statement come under?
+a. DDL
+b. DML
+c. DCL
+d. TCL
+
+3. You have created a table named 'Students' which has columns 'ID', 'Name', 'Age',
+'Marks'. You want to create a procedure that selects students whose marks are
+greater than 80. Give the SQL query that implements the same and executes it.
+a. CREATE PROC topstudents @marks int
+AS
+SELECT * FROM Students
+GO;
+EXEC PROC topstudents;
+b. CREATE PROCEDURE topstudents @marks int
+AS
+SELECT * FROM Students WHERE Marks > @marks;
+EXEC PROCEDURE topstudents @marks = 80;
+c. CREATE PROCEDURE topstudents @marks int
+AS
+SELECT * FROM Students WHERE Marks > @marks
+GO;
+EXEC topstudents @marks = 80;
+d. CREATE PROCEDURE name topstudents params @marks int
+AS
+SELECT * FROM Students WHERE Marks > @marks
+GO;
+EXECUTE topstudents @marks = 80;
+
+4. Consider the given query that is used by a user to create the table named 'Student':
+CREATE TABLE Student(
+ID int,
+Name varchar(255),
+Age int,
+Marks int
+);
+What query he should enter to modify the table so that the column ID should not
+accept null values?
+a. ALTER TABLE Student
+MODIFY ID int NOT NULL;
+b. ALTER TABLE Student
+ID int UNIQUE;
+c. ALTER TABLE Student
+MODIFY ID int NO NULL;
+d. ALTER TABLE Student
+ID int constraint NOT NULL;
+
+5. What is the first step a designer should take to create ER diagram for a system?
+a. Identify the transitions that happen for the mentioned states
+b. Identify the entities existing in the system and the relationship between them
+c. Identify the pointers that exist between the parent and the child
+d. Identify the dependencies that exist in the system.
+
+6. Which normalization form is based on the transitive dependency ?
+a. 1NF
+b. 2NF
+c. 3NF
+d. 4NF
+
+7. Which property will ensure auto incrementation?
+a. Default
+b. Increment
+c. Step
+d. auto value
+
+8. Consider the table given below. According to First Normal Form rules, What
+changes are to be done in the table inorder to make the table satisfy the 1NF?
+a. Each record in the table needs to be unique
+b. A primary key in the table should be single column.
+c. Each cell in the table should contain single value and each record needs to
+be unique
+d. The table should not have any transitive dependencies. So, these should be
+eliminated
+
+9. Consider the following query:
+SELECT package
+FROM fruit_basket
+WHERE fruit_name = 'apple'
+ORDER BY package;
+The default listing of data would be in ___ order
+a. Random
+b. Ascending
+c. Descending
+d. Same as stored
+
+10. Which of the options would be replacement for the following query?
+SELECT name
+FROM trainer
+WHERE age <= 30 AND age >= 40;
+a. SELECT name
+FROM trainer
+WHERE age BETWEEN 40 AND 30;
+b. SELECT name
+FROM employee
+WHERE age <= 40 AND age>=30;
+c. SELECT name
+FROM employee
+WHERE age BETWEEN 40 AND 30;
+d. SELECT name
+FROM trainer
+WHERE age BETWEEN 30 AND 40;
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+Section 5: Problem Solving
+Choose the correct option for the following questions:
+1. There are 7 blue baskets and 8 green baskets in a store. The storekeeper has 5 apples,
+5 oranges and 5 plums. The storekeeper puts the fruits, one in each basket. What is the
+probability that a blue basket selected at random has either an apple or an orange?
+a. 2/15
+b. 14/45
+c. 2/3
+d. 5/7
+
+2. Read the following two statements and choose which of the options are true?
+1. The government has created restrictions on plastic cutleries being produced and distributed.
+2. The demand for disposable clay cups has increased in cafes and small restaurants.
+a. Statement 1 is the cause and statement 2 is its effect
+b. Statement 2 is the cause and statement 1 is its effect
+c. Both the statements 1 and 2 are independent causes
+d. Both the statements 1 and 2 are effects of some common cause
+
+3. Read the following two statements and choose which of the options are conclusively true?
+1. Apples are red or green in colour
+2. Green apples are very expensive
+3. Green apples are produced more than the red apples.
+a. Red apples are cheap
+b. Green apples are found in abundance yet expensive
+c. Red apples are expensive
+d. Red apples are imported
+
+4. Which of the following word does not belong with the others ?
+a. knife set
+b. Oven
+c. Kitchen
+d. blender
+
+5. A posthumous award is granted after the recipient has died. Read the following
+sentences and decide which of the options are true?
+1. Wife of late John Doe has been handed medal of honour for John's services in the army
+2. Jane's contract ended when she suddenly died of heart attack
+3. Rose was selected as the vice president of the firm after her husband passed away
+4. Smith has been awarded the "under 16 champion" and is sure to reach greater heights when he reaches the senior level
+a. 1 and 3
+b. Only 1
+c. 1,2,4
+d. 1,2,3
+
+6. On writing first 133 positive integers on a piece of paper, how many times digit 5 appears?
+a. 13
+b. 23
+c. 14
+d. 15
+
+7. The numbers 148, 253 and 103 when divided by a number N give the same remainder
+of 13. Find the highest such number N.
+a. 5
+b. 13
+c. 15
+d. 3
+
+8. Jane has spend 65% of her salary on monthly expenses and has invested 15 % of her
+salary in the stock market. If Jane is left with 1200 dollars for her leisure expenditure,
+what is the monthly salary of Jane?
+a. 4800
+b. 5000
+c. 6000
+d. 12000
+
+9. two pumps are used to fille water in a tank. Pump A and Pump B together take 6
+hours to fille the tank. If only pump A is used, it takes 10 hours to fill the water tank.
+How many hours would it take to fill the tank if only pump B was used ?
+a. 20
+b. 15
+c. 12
+d. 14
+
+10. An bank elevator has a weight limit of 700 kg. The lift operator and a security guard
+are always present in the elevator. The lift operator weighs 62 Kgs and the security
+guard weighs 67 Kgs. Among the other employees in the elevator currently, the
+lightest person's weight is 55 Kgs and heaviest is 70 kgs. What is the maximum
+possible number of people in the elevator currently?
+a. 9
+b. 13
+c. 10
+d. 12
+
+----------------------------------------------------------------------------------------------------------------
+
+Section 6: Coding
+Write code snippets for following problem statements:
+Complexity: Low
+Problem Statement 1:
+Given an integer array data of size arr_size where the minimum size of array is 1. Each
+integer appears once or twice. Write a function which will return an array of all the integers
+that appear twice. Ignore the integer if it appears three or more number of times.
+Example1:
+data = [10, 12, 10, 11, 13, 17, 16, 15, 11]
+output = [10, 11]
+Example 2:
+data = [7, 3, 8, 6, 4, 6, 7, 8, 9, 8, 7]
+output = [6]
+
+Complexity: Medium
+Problem Statement 2:
+John (1) and Jack (2), are friends who construct the wall as per the number of bricks given to them.
+They work turn by turn. John works in the increasing order starting from 1 with an increment of 1. 
+Jack places twice the bricks as John places in previous turn.
+Goal is to find who placed the last brick and how many bricks will be placed in the end.
+Example 1:
+numberOfBricks: 13
+John & Jack will construct the wall
+John 1
+Total Bricks till now: 1
+Jack 1*2
+Total Bricks till now: 3
+John 2
+Total Bricks till now: 5
+Jack 2*2
+Total Bricks till now: 9
+John 3
+Total Bricks till now: 12
+Jack 3*2
+Total Bricks till now: 18
+Since total bricks to be placed were 13. But lastly sum became 18, hence lastly Jack has to place on 1
+more brick. The correct answer in result array is:
+result[0] = 2 // as Jack placed the last brick
+result[1] = 1 // only 1 brick was to be placed in the end
+Example 2:
+numberOfBricks: 10
+John & Jack will construct the wall
+John 1
+Total Bricks till now: 1
+Jack 1*2
+Total Bricks till now: 3
+John 2
+Total Bricks till now: 5
+Jack 2*2
+Total Bricks till now: 9
+John 3
+Total Bricks till now: 12
+Since total bricks to be placed were 10. But lastly sum became 12, hence lastly John has to place on 1
+more brick. The correct answer in result array is:
+result[0] = 1 // as John placed the last brick
+result[1] = 1 // only 1 brick was to be placed in the end"

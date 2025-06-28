@@ -15,8 +15,8 @@ class GNode<T> {
     }
 }
 class CustomLinkedList<T> {
-    private GNode<T> head;
-    private int size = 0;
+    protected GNode<T> head;
+    protected int size = 0;
 
     public void add(T data) {
         GNode<T> newNode = new GNode<>(data);

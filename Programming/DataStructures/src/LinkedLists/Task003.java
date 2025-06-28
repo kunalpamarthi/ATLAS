@@ -85,5 +85,7 @@ public class Task003 {
         linkedList.add(40);
         linkedList.add(50);
         linkedList.printList();
+        linkedList.deleteAtPosition(2);
+        linkedList.printList();
     }
 }

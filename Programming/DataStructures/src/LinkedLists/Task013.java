@@ -1,10 +1,10 @@
-// Task012: Use pop and push methods on linked list.
+// Task013: Use pop and push methods on linked list.
 
 package LinkedLists;
 
 import java.util.LinkedList;
 
-public class Task012 {
+public class Task013 {
     public static void main(String[] args) {
         LinkedList<String> list = new LinkedList<>();
         list.push("One");

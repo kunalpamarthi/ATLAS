@@ -3,7 +3,10 @@
 
 package LinkedLists;
 
+import java.util.Iterator;
 import java.util.NoSuchElementException;
+import java.util.Spliterator;
+import java.util.function.Consumer;
 
 class GNode<T> {
     T data;
@@ -14,9 +17,44 @@ class GNode<T> {
         this.next = null;
     }
 }
-class CustomLinkedList<T> {
+class CustomLinkedList<T> implements Iterable<T> {
     protected GNode<T> head;
     protected int size = 0;
+
+    @Override
+    public Iterator<T> iterator() {
+        return new LinkedListIterator();
+    }
+
+    private class LinkedListIterator implements Iterator<T> {
+        private GNode<T> current = head;
+
+        @Override
+        public boolean hasNext() {
+            return current != null;
+        }
+
+        @Override
+        public T next() {
+            if (!hasNext()) {
+                throw new NoSuchElementException();
+            }
+            T data = current.data;
+            current = current.next;
+            return data;
+        }
+    }
+
+
+    @Override
+    public void forEach(Consumer<? super T> action) {
+        Iterable.super.forEach(action);
+    }
+
+    @Override
+    public Spliterator<T> spliterator() {
+        return Iterable.super.spliterator();
+    }
 
     public void add(T data) {
         GNode<T> newNode = new GNode<>(data);

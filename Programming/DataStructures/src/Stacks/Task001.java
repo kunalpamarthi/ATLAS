@@ -5,6 +5,7 @@ package Stacks;
 class Node<T>{
     T data;
     Node<T> next;
+
     public Node(T data){
         this.data = data;
         this.next = null;
@@ -13,6 +14,7 @@ class Node<T>{
 
 class LinkedList<T>{
     Node<T> head;
+    Node<T> tail;
 
     public void addNode(T data){
         Node<T> node = new Node<>(data);

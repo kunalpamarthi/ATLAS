@@ -26,7 +26,7 @@ public class Task006 {
             searching.insert(a);
         }
         Node node = searching.search(4);
-        System.out.println("Required data -> \t\t"+node.data);
+        System.out.println("Found the data -> \t\t"+node.data);
         System.out.println("\t\t\t\t\t/\t\t\\");
         System.out.println(node.left +"  \t\t "+ node.right);
     }

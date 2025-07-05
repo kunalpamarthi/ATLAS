@@ -2,10 +2,10 @@
 
 package Trees;
 
-class Node<T>{
-    T data;
-    Node<T> left, right;
-    public Node(T data){
+class Node{
+    int data;
+    Node left, right;
+    public Node(int data){
         this.right = null;
         this.left = null;
         this.data = data;
@@ -18,7 +18,7 @@ class Node<T>{
 
 public class Task001 {
     public static void main(String[] args) {
-        Node<String> node = new Node<>(" ");
+        Node node = new Node(1);
         node.display();
     }
 }

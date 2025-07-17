@@ -80,13 +80,20 @@ class AVLTree {
         return node;
     }
 
-    void printTree(Node root){
-        if (root == null)
-            return;
-
-        printTree(root.left);
-        System.out.print(root.key + " ");
-        printTree(root.left);
+    void printTree(Node node, String indent, boolean last) {
+        if (node != null) {
+            System.out.print(indent);
+            if (last) {
+                System.out.print("R----");
+                indent += "     ";
+            } else {
+                System.out.print("L----");
+                indent += "|    ";
+            }
+            System.out.println(node.key);
+            printTree(node.left, indent, false);
+            printTree(node.right, indent, true);
+        }
     }
 }
 
@@ -99,8 +106,9 @@ public class Task002 {
         tree.root = tree.insert(tree.root, 35);
         tree.root = tree.insert(tree.root, 65);
         tree.root = tree.insert(tree.root, 78);
+
         System.out.println("AVL Tree: ");
-        tree.printTree(tree.root);
+        tree.printTree(tree.root, "", true);
     }
 }
 

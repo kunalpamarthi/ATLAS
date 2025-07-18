@@ -1,6 +1,6 @@
 // Task002: AVL tree insertion.
 
-package Misc;
+package AVLnRB;
 
 class Node {
     int key, height;

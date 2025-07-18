@@ -1,6 +1,6 @@
 // Task004: Red-Black tree.
 
-package Misc;
+package AVLnRB;
 
 class RedBlackTree {
     Node root;

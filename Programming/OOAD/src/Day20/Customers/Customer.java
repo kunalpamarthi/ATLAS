@@ -1,6 +1,6 @@
 // Task001: Without SRP
 
-package Day20;
+package Day20.Customers;
 
 import java.io.FileWriter;
 import java.io.IOException;

@@ -1,7 +1,5 @@
 package Day20.Notifications;
 
-import java.util.Currency;
-
 public class Notifications {
     public void sendOTP(String via){
         if (via.equals("email")){

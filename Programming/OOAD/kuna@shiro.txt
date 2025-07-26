@@ -1,0 +1,3 @@
+Employee name: kunal.
+Employee email: kuna@shiro.
+Employee salary: 50000.0.

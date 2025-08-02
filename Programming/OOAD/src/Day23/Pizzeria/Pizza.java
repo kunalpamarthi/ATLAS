@@ -1,4 +1,4 @@
-package Day23;
+package Day23.Pizzeria;
 
 public interface Pizza {
     void preparations();

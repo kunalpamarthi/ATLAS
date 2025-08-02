@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a3ee5fd-48f1-43fc-8587-74232b0532f4" name="Changes" comment="JUnitTestSuite">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/JUnitPriorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Daily Tasks/Day22_113203635_Kunal.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Daily Tasks/Day22_113203635_Kunal.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="1a3ee5fd-48f1-43fc-8587-74232b0532f4" name="Changes" comment="Tags annotation" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,11 +97,20 @@
       <option name="project" value="LOCAL" />
       <updated>1754110699303</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Tags annotation">
+      <option name="closed" value="true" />
+      <created>1754112034556</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1754112034556</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="JUnitTestSuite" />
-    <option name="LAST_COMMIT_MESSAGE" value="JUnitTestSuite" />
+    <MESSAGE value="Tags annotation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tags annotation" />
   </component>
 </project>

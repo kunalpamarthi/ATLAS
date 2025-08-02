@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1a3ee5fd-48f1-43fc-8587-74232b0532f4" name="Changes" comment="JUnitTestSuite">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/JUnitPriorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Daily Tasks/Day22_113203635_Kunal.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Daily Tasks/Day22_113203635_Kunal.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "kunalpamarthi"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/kunalpamarthi/ATLAS.git",
+    "accountId": "a92f88dc-03b1-4ec4-9ffe-819768bd2232"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="30gT737WZ52BBQGZ8p7bsfTdo5F" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.JUnitAddTest.executor": "Run",
+    "JUnit.JUnitDiffTest.executor": "Run",
+    "JUnit.JUnitPriorTest.executor": "Run",
+    "JUnit.JUnitProdTest.executor": "Run",
+    "JUnit.JUnitQuotTest.executor": "Run",
+    "JUnit.JUnitTest.executor": "Run",
+    "JUnit.JUnitTestSuite.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "last_directory_selection": "C:/Users/shirokun/Desktop/ATLAS/VLIT/Programming/Testing/src/test/java/org/example",
+    "onboarding.tips.debug.path": "C:/Users/shirokun/Desktop/ATLAS/VLIT/Programming/Testing/src/main/java/org/example/Main.java"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.example" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="TestingExample" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="TestingExample" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1a3ee5fd-48f1-43fc-8587-74232b0532f4" name="Changes" comment="" />
+      <created>1754048048117</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1754048048117</updated>
+    </task>
+    <task id="LOCAL-00001" summary="JUnitTestSuite">
+      <option name="closed" value="true" />
+      <created>1754110699303</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1754110699303</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="JUnitTestSuite" />
+    <option name="LAST_COMMIT_MESSAGE" value="JUnitTestSuite" />
+  </component>
+</project>

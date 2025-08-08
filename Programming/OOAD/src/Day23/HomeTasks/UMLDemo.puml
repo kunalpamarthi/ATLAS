@@ -1,0 +1,29 @@
+' HomeTask005: UML Demo
+
+@startuml
+    participant Pax as p
+    actor TheActor as a  #Green
+    boundary TheBoundary as b
+    control C as c
+    database Dbase as db
+    entity table as t
+    collections col as c
+    queue que as q
+
+    autonumber
+    p -[#red]> a : pax to actor
+    a ->x p: ohh is it!
+    autonumber 100
+    b ->> p: boundary to pax
+    note left: plz make a note on left
+    c -\ p: control to pax
+    db \\- p: db to pax
+    autonumber 50 10
+    t //-- db: table to db
+    c ->o db: collection to db
+    note right: plz make a note
+    q <->o p: q to pax
+
+    Prasunamba -> Batch2 : learning uml
+    Batch2 -> Prasunamba: ok will learn
+@enduml

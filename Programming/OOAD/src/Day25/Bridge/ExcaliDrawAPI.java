@@ -1,5 +1,5 @@
 package Day25.Bridge;
 // implementor
-public interface ExcalidrawAPI {
+public interface ExcaliDrawAPI {
     void drawSquare(int s);
 }

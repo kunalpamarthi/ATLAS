@@ -2,10 +2,10 @@ package Day25.Bridge;
 
 public class Square extends Shape{
     private int s;
-    ExcalidrawAPI excalidrawAPI;
+    ExcaliDrawAPI excalidrawAPI;
     Square(int s) {
         super(excalidrawAPI);
-        // super(ExcalidrawAPI excalidrawAPI); // need to check
+        // super(ExcaliDrawAPI excalidrawAPI); // need to check
 
         this.s = s;
     } 

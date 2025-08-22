@@ -1,5 +1,5 @@
-// package com.example;
-package Module03OOAD.designPatterns.StructuralDP.FacadeMethodDP.demo.src.main.java.com.example;
+package Day25.Facade;// package com.example;
+
 
 public class Main {
     public static void main(String[] args) {

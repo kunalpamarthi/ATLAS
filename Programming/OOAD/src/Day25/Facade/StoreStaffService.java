@@ -1,4 +1,4 @@
-package Module03OOAD.designPatterns.StructuralDP.FacadeMethodDP.demo.src.main.java.com.example;
+package Day25.Facade;
 
 public class StoreStaffService {
     public void getItems(String items) {

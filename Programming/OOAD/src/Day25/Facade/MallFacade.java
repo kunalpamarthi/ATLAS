@@ -1,4 +1,5 @@
-package Module03OOAD.designPatterns.StructuralDP.FacadeMethodDP.demo.src.main.java.com.example;
+package Day25.Facade;
+
 // facade
 public class MallFacade {
     private StoreStaffService storeStaffService;

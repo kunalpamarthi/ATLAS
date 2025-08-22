@@ -1,4 +1,4 @@
-package Module03OOAD.designPatterns.StructuralDP.FacadeMethodDP.demo.src.main.java.com.example;
+package Day25.Facade;
 
 public class BillingCounterService {
     public void payBill(String accountId, String billId, double amount) {

@@ -21,45 +21,45 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "kunalpamarthi"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;kunalpamarthi&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/kunalpamarthi/ATLAS.git",
-    "accountId": "a92f88dc-03b1-4ec4-9ffe-819768bd2232"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kunalpamarthi/ATLAS.git&quot;,
+    &quot;accountId&quot;: &quot;a92f88dc-03b1-4ec4-9ffe-819768bd2232&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="30gT737WZ52BBQGZ8p7bsfTdo5F" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.JUnitAddTest.executor": "Run",
-    "JUnit.JUnitDiffTest.executor": "Run",
-    "JUnit.JUnitPriorTest.executor": "Run",
-    "JUnit.JUnitProdTest.executor": "Run",
-    "JUnit.JUnitQuotTest.executor": "Run",
-    "JUnit.JUnitTest.executor": "Run",
-    "JUnit.JUnitTestSuite.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "last_directory_selection": "C:/Users/shirokun/Desktop/ATLAS/VLIT/Programming/Testing/src/test/java/org/example",
-    "onboarding.tips.debug.path": "C:/Users/shirokun/Desktop/ATLAS/VLIT/Programming/Testing/src/main/java/org/example/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.JUnitAddTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JUnitDiffTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JUnitPriorTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JUnitProdTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JUnitQuotTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JUnitTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JUnitTestSuite.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/shirokun/Desktop/ATLAS/VLIT/Programming/Testing/src/test/java/org/example&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/shirokun/Desktop/ATLAS/VLIT/Programming/Testing/src/main/java/org/example/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -67,19 +67,6 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="org.example" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="TestingExample" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="TestingExample" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

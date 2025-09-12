@@ -2,39 +2,59 @@
 
 package org.example;
 
-import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
-import com.amazonaws.services.dynamodbv2.document.DynamoDB;
-import com.amazonaws.services.dynamodbv2.document.Table;
-import com.amazonaws.services.dynamodbv2.model.*;
+import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
+import software.amazon.awssdk.services.dynamodb.model.AttributeDefinition;
+import software.amazon.awssdk.services.dynamodb.model.CreateTableRequest;
+import software.amazon.awssdk.services.dynamodb.model.DescribeTableRequest;
+import software.amazon.awssdk.services.dynamodb.model.KeySchemaElement;
+import software.amazon.awssdk.services.dynamodb.model.KeyType;
+import software.amazon.awssdk.services.dynamodb.model.ProvisionedThroughput;
+import software.amazon.awssdk.services.dynamodb.model.ScalarAttributeType;
+import software.amazon.awssdk.services.dynamodb.waiters.DynamoDbWaiter;
 
-import java.util.Arrays;
+import java.net.URI;
 
 public class DynamoConnect {
     public static void main(String[] args) {
-        AmazonDynamoDBClient client = new AmazonDynamoDBClient()
-                .withEndpoint("http://localhost:8000"); // corrected endpoint URL
+        DynamoDbClient dynamoDbClient = DynamoDbClient.builder()
+                .endpointOverride(URI.create("http://localhost:8000"))
+                .build();
 
-        DynamoDB dynamoDB = new DynamoDB(client);
         String tableName = "Customer";
 
         try {
             System.out.println("Creating Customer table...");
-            Table table = dynamoDB.createTable(
-                    tableName,
-                    Arrays.asList(
-                            new KeySchemaElement("ID", KeyType.HASH),
-                            new KeySchemaElement("No", KeyType.RANGE)
-                    ),
-                    Arrays.asList(
-                            new AttributeDefinition("ID", ScalarAttributeType.S), // corrected attribute type
-                            new AttributeDefinition("No", ScalarAttributeType.S)
-                    ),
-                    new ProvisionedThroughput(5L, 5L)
-            );
-            table.waitForActive();
-            System.out.println("Table created and active. Status: " + table.getDescription().getTableStatus());
+
+            CreateTableRequest createTableRequest = CreateTableRequest.builder()
+                    .tableName(tableName)
+                    .keySchema(
+                            KeySchemaElement.builder().attributeName("ID").keyType(KeyType.HASH).build(),
+                            KeySchemaElement.builder().attributeName("No").keyType(KeyType.RANGE).build()
+                    )
+                    .attributeDefinitions(
+                            AttributeDefinition.builder().attributeName("ID").attributeType(ScalarAttributeType.S).build(),
+                            AttributeDefinition.builder().attributeName("No").attributeType(ScalarAttributeType.S).build()
+                    )
+                    .provisionedThroughput(ProvisionedThroughput.builder()
+                            .readCapacityUnits(5L)
+                            .writeCapacityUnits(5L)
+                            .build())
+                    .build();
+
+            dynamoDbClient.createTable(createTableRequest);
+
+            DynamoDbWaiter dynamoDbWaiter = dynamoDbClient.waiter();
+            DescribeTableRequest describeTableRequest = DescribeTableRequest.builder()
+                    .tableName(tableName)
+                    .build();
+
+            dynamoDbWaiter.waitUntilTableExists(describeTableRequest);
+
+            System.out.println("Table created and active.");
         } catch (Exception ex) {
-            System.err.println("Error creating table: " + ex.getMessage()); // using err for error messages
+            System.err.println("Error creating table: " + ex.getMessage());
+        } finally {
+            dynamoDbClient.close();
         }
     }
 }

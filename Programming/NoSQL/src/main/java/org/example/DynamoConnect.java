@@ -20,7 +20,7 @@ public class DynamoConnect {
                 .endpointOverride(URI.create("http://localhost:8000"))
                 .build();
 
-        String tableName = "Customer";
+        String tableName = "Employees01";
 
         try {
             System.out.println("Creating Customer table...");
@@ -29,11 +29,12 @@ public class DynamoConnect {
                     .tableName(tableName)
                     .keySchema(
                             KeySchemaElement.builder().attributeName("ID").keyType(KeyType.HASH).build(),
-                            KeySchemaElement.builder().attributeName("No").keyType(KeyType.RANGE).build()
+                            KeySchemaElement.builder().attributeName("Name").keyType(KeyType.RANGE).build()
                     )
                     .attributeDefinitions(
                             AttributeDefinition.builder().attributeName("ID").attributeType(ScalarAttributeType.S).build(),
-                            AttributeDefinition.builder().attributeName("No").attributeType(ScalarAttributeType.S).build()
+                            AttributeDefinition.builder().attributeName("Name").attributeType(ScalarAttributeType.S).build(),
+                            AttributeDefinition.builder().attributeName("Address").attributeType(ScalarAttributeType.S).build()
                     )
                     .provisionedThroughput(ProvisionedThroughput.builder()
                             .readCapacityUnits(5L)

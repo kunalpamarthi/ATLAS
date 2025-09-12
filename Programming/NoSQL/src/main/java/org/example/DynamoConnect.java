@@ -16,13 +16,11 @@ import java.net.URI;
 
 public class DynamoConnect {
     public static void main(String[] args) {
-        DynamoDbClient dynamoDbClient = DynamoDbClient.builder()
+
+        try (DynamoDbClient dynamoDbClient = DynamoDbClient.builder()
                 .endpointOverride(URI.create("http://localhost:8000"))
-                .build();
-
-        String tableName = "Employees01";
-
-        try {
+                .build()) {
+            String tableName = "Employees01";
             System.out.println("Creating Customer table...");
 
             CreateTableRequest createTableRequest = CreateTableRequest.builder()
@@ -54,8 +52,6 @@ public class DynamoConnect {
             System.out.println("Table created and active.");
         } catch (Exception ex) {
             System.err.println("Error creating table: " + ex.getMessage());
-        } finally {
-            dynamoDbClient.close();
         }
     }
 }

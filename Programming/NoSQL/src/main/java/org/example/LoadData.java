@@ -20,7 +20,7 @@ public class LoadData {
         String table = "Employees01";
         System.out.println("Connection established..");
         ObjectMapper objectMapper = new ObjectMapper();
-        InputStream inputStream = LoadData.class.getClassLoader().getResourceAsStream("EmployeesData.json");
+        InputStream inputStream = LoadData.class.getClassLoader().getResourceAsStream("EmployeeData.json");
         JsonNode jsonNode = objectMapper.readTree(inputStream);
         System.out.println("JSON data in the input stream...");
         Iterator<JsonNode> jsonNodeIterator = jsonNode.elements();

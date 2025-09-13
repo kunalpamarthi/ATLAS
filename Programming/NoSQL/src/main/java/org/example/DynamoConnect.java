@@ -31,8 +31,7 @@ public class DynamoConnect {
                     )
                     .attributeDefinitions(
                             AttributeDefinition.builder().attributeName("ID").attributeType(ScalarAttributeType.S).build(),
-                            AttributeDefinition.builder().attributeName("Name").attributeType(ScalarAttributeType.S).build(),
-                            AttributeDefinition.builder().attributeName("Address").attributeType(ScalarAttributeType.S).build()
+                            AttributeDefinition.builder().attributeName("Name").attributeType(ScalarAttributeType.S).build()
                     )
                     .provisionedThroughput(ProvisionedThroughput.builder()
                             .readCapacityUnits(5L)

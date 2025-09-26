@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a3ee5fd-48f1-43fc-8587-74232b0532f4" name="Changes" comment="Tags annotation" />
+    <list default="true" id="1a3ee5fd-48f1-43fc-8587-74232b0532f4" name="Changes" comment="Tags annotation">
+      <change afterPath="$PROJECT_DIR$/../JUnit/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JUnit/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JUnit/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JUnit/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JUnit/src/test/java/org/example/DemoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

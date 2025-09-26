@@ -34,6 +34,23 @@
             <version>2.15.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>software.amazon.awssdk</groupId>
+            <artifactId>dax</artifactId>
+            <version>2.25.61</version>
+        </dependency>
+
+        <dependency>
+            <groupId>software.amazon.dax</groupId>
+            <artifactId>amazon-dax-client</artifactId>
+            <version>2.0.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>software.amazon.awssdk</groupId>
+            <artifactId>dynamodb-enhanced</artifactId>
+            <version>2.25.61</version>
+        </dependency>
     </dependencies>
 
 </project>

@@ -12,6 +12,7 @@ public class HRPortal {
     private final DepartmentService departmentService;
     private final AttendanceService attendanceService;
     private final PayrollService payrollService;
+    private final MainPortal mainPortal;
 
     public HRPortal() {
         this.scanner = new Scanner(System.in);
@@ -19,6 +20,7 @@ public class HRPortal {
         this.departmentService = new DepartmentService();
         this.attendanceService = new AttendanceService();
         this.payrollService = new PayrollService();
+        this.mainPortal = new MainPortal();
     }
 
     public void start() {
@@ -262,6 +264,11 @@ public class HRPortal {
     }
 
     private void processMonthlyPayroll() {
+        if (mainPortal.getProcessed()){
+            System.out.println("\nPayroll for this month is already processed!!");
+            return;
+        }
+
         System.out.println("\n--- Process Monthly Payroll ---");
         try {
             payrollService.initiateMonthlyPayrollBatch();
@@ -269,11 +276,10 @@ public class HRPortal {
         } catch (Exception e) {
             System.out.println("Error processing payroll: " + e.getMessage());
         }
+        mainPortal.setProcessed(true);
         pressEnterToContinue();
     }
 
-    // Continuing in HRPortal.java
-// Add these methods to the existing class
 
     private void viewEmployeeDetails() {
         System.out.println("\n--- View Employee Details ---");
@@ -548,6 +554,11 @@ public class HRPortal {
 
             System.out.print("Enter Month (YYYY-MM): ");
             String month = scanner.nextLine();
+
+            if (month.isEmpty() || empId.isEmpty()){
+                System.out.println("Both Employee ID and Month are mandatory fields.");
+                return;
+            }
 
             Salary salary = payrollService.getSalarySlip(empId, month);
             if (salary != null) {

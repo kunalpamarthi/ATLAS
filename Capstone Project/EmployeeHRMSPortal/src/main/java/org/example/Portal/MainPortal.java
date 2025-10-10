@@ -1,12 +1,17 @@
 package org.example.Portal;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.example.Service.EmployeeService;
 
 import java.util.Scanner;
 
+@Setter
+@Getter
 public class MainPortal {
     private static final Scanner scanner = new Scanner(System.in);
     private static final EmployeeService employeeService = new EmployeeService();
+    private Boolean processed = false;
 
     public static void main(String[] args) {
         System.out.println("\n=== Welcome to Employee HRMS ===");

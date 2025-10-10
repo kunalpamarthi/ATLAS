@@ -96,7 +96,7 @@ public class PayrollService {
         int totalWorkingDays = ym.lengthOfMonth(); // Assuming all days are working days
 
         // Calculate attendance
-        double totalDaysPresent = monthlyAttendance.stream()
+        double totalDaysPresent = totalWorkingDays - monthlyAttendance.stream()
                 .mapToDouble(Attendance::getAttendanceValue)
                 .sum();
 
@@ -104,7 +104,7 @@ public class PayrollService {
         double basicSalary = dayWage * totalDaysPresent;
 
         // Calculate other components
-        double hra = basicSalary * 0.4 * totalDaysPresent/totalWorkingDays; // 40% of basic as HRA
+        double hra = basicSalary * 0.4; // 40% of basic as HRA
         double pfContribution = basicSalary * 0.12; // 12% of basic as PF
         double netPay = basicSalary + hra - pfContribution;
         Salary salary = new Salary();

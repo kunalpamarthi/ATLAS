@@ -59,14 +59,21 @@ public class AttendanceDAO {
     }
 
     public List<Attendance> getMonthlyAttendance(String empId, String yearMonth) {
-        Map<String, AttributeValue> expressionValues = new HashMap<>();
-        expressionValues.put(":empId", AttributeValue.builder().s(empId).build());
-        expressionValues.put(":yearMonth", AttributeValue.builder().s(yearMonth).build());
+        Map<String, String> expressionAttributeNames = new HashMap<>();
+        expressionAttributeNames.put("#empId", "empId");
+        expressionAttributeNames.put("#date", "date");
 
+        // Create expression attribute values
+        Map<String, AttributeValue> expressionAttributeValues = new HashMap<>();
+        expressionAttributeValues.put(":empId", AttributeValue.builder().s(empId).build());
+        expressionAttributeValues.put(":yearMonth", AttributeValue.builder().s(yearMonth).build());
+
+        // Build query request with expression attribute names
         QueryRequest request = QueryRequest.builder()
                 .tableName(Constants.ATTENDANCE_TABLE)
-                .keyConditionExpression("empId = :empId AND begins_with(date, :yearMonth)")
-                .expressionAttributeValues(expressionValues)
+                .keyConditionExpression("#empId = :empId AND begins_with(#date, :yearMonth)")
+                .expressionAttributeNames(expressionAttributeNames)
+                .expressionAttributeValues(expressionAttributeValues)
                 .build();
 
         try {

@@ -21,13 +21,17 @@ public class EmployeeDAO {
     public List<Employee> getAllActiveEmployees() {
         try {
             // Create a scan request with a filter for active status
-            Map<String, AttributeValue> expressionValues = new HashMap<>();
-            expressionValues.put(":statusValue", AttributeValue.builder().s("ACTIVE").build());
+            Map<String, String> expressionAttributeNames = new HashMap<>();
+            expressionAttributeNames.put("#s", "status");
+
+            Map<String, AttributeValue> expressionAttributeValues = new HashMap<>();
+            expressionAttributeValues.put(":statusValue", AttributeValue.builder().s("ACTIVE").build());
 
             ScanRequest scanRequest = ScanRequest.builder()
                     .tableName(Constants.EMPLOYEE_TABLE)
-                    .filterExpression("status = :statusValue")
-                    .expressionAttributeValues(expressionValues)
+                    .filterExpression("#s = :statusValue")
+                    .expressionAttributeNames(expressionAttributeNames)
+                    .expressionAttributeValues(expressionAttributeValues)
                     .build();
 
             ScanResponse response = dynamoDbClient.scan(scanRequest);
